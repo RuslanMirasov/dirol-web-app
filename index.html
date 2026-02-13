@@ -18,6 +18,44 @@
         <h2 style="margin: auto" onclick="window.quiz.set('unique', true)">Уникальность</h2>
         <h2 style="margin: auto" onclick="window.quiz.reset()">Сброс</h2>
       </div>
+      <form class="quiz-question">
+        <h3>Какой вайб у снимка?</h3>
+
+        <label class="quiz-option">
+          <input type="radio" name="imageVibe" value="чилловый" onchange="window.quiz.set('imageVibe', this.value)" />
+          Чилловый
+        </label>
+
+        <label class="quiz-option">
+          <input type="radio" name="imageVibe" value="движовый" onchange="window.quiz.set('imageVibe', this.value)" />
+          Движовый
+        </label>
+
+        <label class="quiz-option">
+          <input type="radio" name="imageVibe" value="романтичный" onchange="window.quiz.set('imageVibe', this.value)" />
+          Романтичный
+        </label>
+
+        <label class="quiz-option">
+          <input type="radio" name="imageVibe" value="угарный" onchange="window.quiz.set('imageVibe', this.value)" />
+          Угарный
+        </label>
+
+        <label class="quiz-option">
+          <input type="radio" name="imageVibe" value="драматичный" onchange="window.quiz.set('imageVibe', this.value)" />
+          Драматичный
+        </label>
+
+        <label class="quiz-option">
+          <input type="radio" name="imageVibe" value="ми-ми-мишный" onchange="window.quiz.set('imageVibe', this.value)" />
+          Ми-ми-мишный
+        </label>
+
+        <label class="quiz-option">
+          <input type="radio" name="imageVibe" value="эстетик core" onchange="window.quiz.set('imageVibe', this.value)" />
+          Эстетик core
+        </label>
+      </form>
     </main>
 
     <script src="./assets/js/scripts.js" type="module"></script>
