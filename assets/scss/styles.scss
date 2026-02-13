@@ -1,0 +1,15 @@
+:root {
+  --font: "intro-head-h-base-regular", sans-serif;
+  --montserrat: "montserrat-regular", sans-serif;
+
+  --white: #ffffff;
+  --black: #282828;
+  --grey: #898989;
+  --red: #95282a;
+  --invalid: #ff002b;
+  --green: #3ead5a;
+  --green-light: #92d051;
+}
+
+@import "fonts";
+@import "reset";

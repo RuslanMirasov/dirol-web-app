@@ -1,0 +1,109 @@
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  backface-visibility: hidden;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  overscroll-behavior: none;
+  -webkit-overflow-scrolling: auto;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #00742f, #6bb323);
+  color: var(--white);
+  font-family: var(--font);
+  font-weight: 400;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+html,
+body {
+  touch-action: manipulation;
+  overscroll-behavior: contain;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: auto;
+  min-height: 100%;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+img {
+  display: block;
+  object-fit: cover;
+  user-select: none;
+}
+
+button {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  background: none;
+  color: inherit;
+  transition: 0.3s;
+  &:disabled {
+    cursor: auto;
+    pointer-events: none;
+    opacity: 0.2;
+  }
+}
+
+ul,
+ol,
+menu {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.green {
+  color: var(--green);
+}
+
+.green-light {
+  color: var(--green-light);
+}
+
+.red {
+  color: var(--red);
+}
+
+.container {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 20px;
+}
