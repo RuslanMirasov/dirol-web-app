@@ -1,0 +1,113 @@
+.section--prizes {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex: 1;
+  padding-bottom: 40px;
+}
+
+.prizes {
+  width: 170px;
+  margin: 0 auto;
+  text-align: center;
+  overflow: visible;
+
+  &.with--images {
+    margin: auto;
+    margin-top: 140px;
+    margin-bottom: 140px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 131px;
+      height: 115px;
+      bottom: 100%;
+      left: 50%;
+      transform: translate(70px, -10px) rotate(-14.4deg);
+      background: url('../img/prizes/bg-top.webp') no-repeat center center/cover;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      width: 131px;
+      height: 115px;
+      top: 100%;
+      right: 50%;
+      transform: translate(-70px, 40px) rotate(12.09deg);
+      background: url('../img/prizes/bg-bottom.webp') no-repeat center center/cover;
+    }
+  }
+
+  .swiper-slide {
+    opacity: 0;
+    transition: 0.6s;
+    pointer-events: none;
+    &.swiper-slide-active {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    img {
+      width: 170px;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.slider-button {
+  display: inline-flex;
+  width: auto;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2px 18px;
+  span {
+    font-size: 12px;
+    line-height: 1;
+    color: #409a27;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 0.2em;
+  }
+}
+
+.swiper {
+  .arrow {
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 36px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 4;
+    &.swiper-button-disabled {
+      opacity: 0.2;
+    }
+
+    &[data-arrow-prev] {
+      right: 100%;
+      top: 50%;
+      transform: translate(-50px, -50%);
+      background: url('../img/svg/prev.svg') no-repeat center center;
+    }
+    &[data-arrow-next] {
+      left: 100%;
+      top: 50%;
+      transform: translate(50px, -50%);
+      background: url('../img/svg/next.svg') no-repeat center center;
+    }
+  }
+}

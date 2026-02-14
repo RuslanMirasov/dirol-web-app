@@ -9,7 +9,7 @@
 ## 📦 Назначение:
 
 - Создаёт состояние квиза, если его нет
-- Позволяет получать текущее состояние (все 6 вопросо)
+- Позволяет получать текущее состояние (все 6 вопросов)
 - Позволяет менять конкретное поле (ответ на вопрос квиза)
 - Позволяет сбросить квиз к дефолтным настройкам
 
@@ -78,12 +78,7 @@ window.quiz.reset();
 
 ```html
 <label>
-  <input 
-     type="radio" 
-     name="imageVibe" 
-     value="чилловый" 
-     onchange="window.quiz.set('imageVibe', this.value)" 
-  />
+  <input type="radio" name="imageVibe" value="чилловый" onchange="window.quiz.set('imageVibe', this.value)" />
   <span>Чилловый</span>
 </label>
 ```

@@ -1,0 +1,30 @@
+//animation: spin 2s linear infinite;
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-10%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.spin {
+  animation: spin 2s linear infinite;
+}
+
+.move {
+  animation: float 3s ease-in-out infinite;
+}

@@ -34,3 +34,15 @@ export const initNavigationMenu = () => {
   if (burger) burger.addEventListener('click', toggleMenu);
   menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
 };
+
+export const hidePreloader = () => {
+  const preloader = document.querySelector('.preloader');
+
+  if (!preloader) return;
+
+  preloader.classList.add('hidden');
+
+  setTimeout(() => {
+    preloader.remove();
+  }, 1000);
+};
