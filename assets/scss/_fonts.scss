@@ -1,17 +1,26 @@
 @font-face {
-  font-family: "intro-head-h-base-regular";
+  font-family: 'intro-head-h-base-regular';
   src:
-    url("../fonts/intro-head-h-base-regular.woff2") format("woff2"),
-    url("../fonts/intro-head-h-base-regular.woff") format("woff");
+    url('../fonts/intro-head-h-base-regular.woff2') format('woff2'),
+    url('../fonts/intro-head-h-base-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "montserrat-regular";
+  font-family: 'montserrat-regular';
   src:
-    url("../fonts/montserrat-regular.woff2") format("woff2"),
-    url("../fonts/montserrat-regular.woff") format("woff");
+    url('../fonts/montserrat-regular.woff2') format('woff2'),
+    url('../fonts/montserrat-regular.woff') format('woff');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'supermolot';
+  src:
+    url('../fonts/supermolot.woff2') format('woff2'),
+    url('../fonts/supermolot.woff') format('woff');
+  font-weight: 900;
   font-style: normal;
 }

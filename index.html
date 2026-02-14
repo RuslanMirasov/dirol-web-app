@@ -11,51 +11,53 @@
     <title>Включи вкус Dirol</title>
   </head>
   <body class="body">
+    <!--BURGER-->
+    <button class="burger">
+      <span>Меню бургер</span>
+    </button>
+
+    <nav class="navigation">
+      <header class="header" data-header>
+        <a href="./" class="logo"><img src="./assets/img/svg/logo.svg" alt="Dirol logo" /></a>
+        <h2 class="header-title">Меню</h2>
+      </header>
+      <ul class="menu">
+        <li><a href="./create-treck" class="menu__link">Сделать трек из фото</a></li>
+        <li><a href="#" class="menu__link">Загрузить чек</a></li>
+        <li><a href="./lk" class="menu__link">Личный кабинет</a></li>
+        <li><a href="./about" class="menu__link">Об акции</a></li>
+        <li><a href="./prizes" class="menu__link">Призы</a></li>
+        <li><a href="./winners" class="menu__link">Победители</a></li>
+        <li><a href="./help" class="menu__link">Помощь</a></li>
+      </ul>
+    </nav>
+
     <main class="main">
-      <header class="header">header</header>
-      <div class="container" style="margin: auto">
-        <h1 style="margin: auto" onclick="window.quiz.set('imageVibe', 'Отличный вайб')">Start</h1>
-        <h2 style="margin: auto" onclick="window.quiz.set('unique', true)">Уникальность</h2>
-        <h2 style="margin: auto" onclick="window.quiz.reset()">Сброс</h2>
-      </div>
-      <form class="quiz-question">
-        <h3>Какой вайб у снимка?</h3>
+      <section class="section section--hero">
+        <div class="container">
+          <div class="hero-images">
+            <h1 hidden>Включи вкус Dirol</h1>
+            <img src="./assets/img/hero/hero-title.webp" alt="Dirol title" class="hero-images__title" />
+            <img src="./assets/img/hero/hero-subtitle.webp" alt="Dirol title" class="hero-images__subtitle" />
+            <img src="./assets/img/hero/headphones.webp" alt="Dirol title" class="hero-images__headphones" />
+          </div>
 
-        <label class="quiz-option">
-          <input type="radio" name="imageVibe" value="чилловый" onchange="window.quiz.set('imageVibe', this.value)" />
-          Чилловый
-        </label>
-
-        <label class="quiz-option">
-          <input type="radio" name="imageVibe" value="движовый" onchange="window.quiz.set('imageVibe', this.value)" />
-          Движовый
-        </label>
-
-        <label class="quiz-option">
-          <input type="radio" name="imageVibe" value="романтичный" onchange="window.quiz.set('imageVibe', this.value)" />
-          Романтичный
-        </label>
-
-        <label class="quiz-option">
-          <input type="radio" name="imageVibe" value="угарный" onchange="window.quiz.set('imageVibe', this.value)" />
-          Угарный
-        </label>
-
-        <label class="quiz-option">
-          <input type="radio" name="imageVibe" value="драматичный" onchange="window.quiz.set('imageVibe', this.value)" />
-          Драматичный
-        </label>
-
-        <label class="quiz-option">
-          <input type="radio" name="imageVibe" value="ми-ми-мишный" onchange="window.quiz.set('imageVibe', this.value)" />
-          Ми-ми-мишный
-        </label>
-
-        <label class="quiz-option">
-          <input type="radio" name="imageVibe" value="эстетик core" onchange="window.quiz.set('imageVibe', this.value)" />
-          Эстетик core
-        </label>
-      </form>
+          <div class="hero-buttons">
+            <a href="#" class="hero-button hero-button--pink">
+              <b>Покупай<br />dirol</b>
+            </a>
+            <a href="#" class="hero-button hero-button--blue">
+              <span><b>Загружай</b><br />чеки в TG-боте</span>
+            </a>
+            <a href="#" class="hero-button hero-button--viola">
+              <strong>Выигрывай призы!</strong>
+            </a>
+            <a href="#" class="hero-button hero-button--yellow">
+              <strong>Зарегистрировать чек</strong>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="./assets/js/scripts.js" type="module"></script>

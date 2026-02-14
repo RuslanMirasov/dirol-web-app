@@ -1,0 +1,138 @@
+.section--hero {
+  min-height: 100svh;
+  max-width: 800px;
+  background: #78bf40;
+
+  .container {
+    height: 100%;
+    min-height: 100svh;
+    gap: 0px;
+  }
+}
+
+.hero-images {
+  display: flex;
+  position: relative;
+  width: 100%;
+  min-height: 70svh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: url('../img/hero/hero.webp') no-repeat center top/cover;
+
+  &:before {
+    content: '';
+    display: block;
+    position: relative;
+    width: 100%;
+    padding-top: 127%;
+  }
+
+  img {
+    position: absolute;
+    &.hero-images__title {
+      width: 256px;
+      top: 20px;
+    }
+    &.hero-images__subtitle {
+      width: 230px;
+      bottom: 14px;
+      right: 50%;
+      transform: translate(56px, 0px);
+    }
+    &.hero-images__headphones {
+      width: 114px;
+      bottom: 30px;
+      left: 50%;
+      transform: translate(64px, 0px);
+    }
+  }
+}
+
+.hero-buttons {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  margin: auto;
+  padding-bottom: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 5px 0px;
+}
+
+.hero-button {
+  display: inline-flex;
+  position: relative;
+  width: auto;
+  height: 56px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: #edd132;
+  font-family: var(--supermolot);
+  text-align: center;
+  border: 2px solid var(--white);
+  transform: skewX(-10deg);
+
+  > span,
+  > b,
+  > strong {
+    position: relative;
+    transform: skewX(10deg);
+    letter-spacing: 0.02em;
+  }
+
+  span {
+    font-size: 16px;
+    line-height: 1;
+    text-transform: none;
+  }
+
+  b,
+  strong {
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  strong {
+    font-size: 22px;
+  }
+
+  &.hero-button--pink {
+    background: #fc63e1;
+    padding: 0px 25px;
+    margin-left: 12px;
+  }
+  &.hero-button--blue {
+    background: #6a23cc;
+    padding: 0px 28px;
+    border-left: none;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 32px;
+      height: 24px;
+      left: 0px;
+      top: 50%;
+      transform: translate(-13px, -50%) skewX(17deg);
+      background: url('../img/svg/hero-separator.svg') no-repeat center center/cover;
+    }
+  }
+  &.hero-button--viola {
+    background: #b553ff;
+    padding: 0px 21px;
+    left: -5px;
+    strong {
+      font-size: 26px;
+    }
+  }
+  &.hero-button--yellow {
+    padding: 0px 25px;
+  }
+}

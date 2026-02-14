@@ -1,6 +1,7 @@
 :root {
-  --font: "intro-head-h-base-regular", sans-serif;
-  --montserrat: "montserrat-regular", sans-serif;
+  --font: 'intro-head-h-base-regular', sans-serif;
+  --montserrat: 'montserrat-regular', sans-serif;
+  --supermolot: 'supermolot', sans-serif;
 
   --white: #ffffff;
   --black: #282828;
@@ -9,7 +10,10 @@
   --invalid: #ff002b;
   --green: #3ead5a;
   --green-light: #92d051;
+  --green-gradient: linear-gradient(90deg, #00742f, #6bb323);
 }
 
-@import "fonts";
-@import "reset";
+@import 'fonts';
+@import 'reset';
+@import 'header';
+@import 'section__hero';
