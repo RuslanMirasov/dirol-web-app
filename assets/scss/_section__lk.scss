@@ -1,0 +1,159 @@
+.section--lk {
+  margin-bottom: auto;
+  padding: 20px;
+}
+
+.user {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px dashed var(--white);
+}
+
+.user-image {
+  display: block;
+  position: relative;
+  width: 133px;
+  height: 106px;
+  border-radius: 10px;
+  border: 4px solid #bbff34;
+  background: #bbff34;
+
+  img {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+  }
+
+  .set-user-image {
+    display: block;
+    width: 17px;
+    height: 17px;
+    border-radius: 17px;
+    position: absolute;
+    right: 6px;
+    top: 6px;
+    z-index: 2;
+    background: var(--white) url('../img/svg/pen.svg') no-repeat center center;
+  }
+}
+
+.user-info {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  flex: 1;
+
+  span {
+    font-size: 16px;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.checks-wrapper,
+.prizes-wrapper {
+  width: 100%;
+  .title {
+    margin-bottom: 20px;
+  }
+}
+
+.checks-wrapper .button {
+  margin: 0 auto;
+  margin-top: 20px;
+  align-self: center;
+}
+
+.empty {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  margin-top: -14px;
+
+  p {
+    font-size: 20px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.checks {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  &:before {
+    content: '';
+    display: block;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: var(--white);
+  }
+
+  li {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+    padding: 10px 0px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    text-transform: uppercase;
+    &:first-child {
+      border-top: none;
+    }
+
+    span,
+    b {
+      display: block;
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 1;
+      width: 100%;
+    }
+  }
+}
+
+.checks__left,
+.checks__right {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.checks__left {
+  width: 130px;
+  span {
+    &:first-child {
+      opacity: 0.3;
+    }
+  }
+  @media (max-width: 359px) {
+    width: 108px;
+  }
+}
+
+.checks__right {
+  flex: 1;
+  text-align: right;
+}

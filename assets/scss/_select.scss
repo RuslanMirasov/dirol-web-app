@@ -1,0 +1,114 @@
+// Главный контейнер компонента
+.choices {
+  background: none;
+  border-radius: 17.5px;
+  width: 100%;
+  height: 35px !important;
+  background: var(--violet);
+  font-family: var(--avg);
+  text-align: center;
+  border: 2px solid var(--white);
+  margin: 0 auto;
+  z-index: 10;
+  &.is-open {
+    border-radius: 17.5px 17.5px 0px 0px;
+  }
+}
+.choices[data-type*='select-one'] .choices__input {
+  padding: 0;
+  border-bottom: none;
+  background-color: none;
+  margin: 0;
+}
+// Видимая часть select (заголовок)
+.choices__inner {
+  width: 280px;
+  border: none;
+  padding: 0;
+  border-radius: 0px 0px 17.5px 17.5px;
+  background: none;
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: var(--white);
+  overflow: hidden;
+}
+
+// Обёртка для списка опций
+.choices__list {
+  border: none !important;
+  overflow: hidden;
+  padding: 0px;
+  background: none;
+  &.choices__list--single {
+    background: none !important;
+    // ТУТ ДЕЛАТЬ КАЛЕНДАЛЬ
+    padding: 0;
+    > .choices__item {
+      padding: 0px !important;
+      font-size: 16px;
+      margin-top: 0;
+    }
+  }
+}
+
+// Выпадающий список
+.choices__list--dropdown {
+  left: -2px;
+  width: calc(100% + 4px) !important;
+  border-radius: 0px 0px 17.5px 17.5px !important;
+  border: 2px solid var(--white) !important;
+  border-top: none !important;
+  font-size: 16px !important;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: var(--white) !important;
+  text-align: center;
+  background: var(--violet) !important;
+  &.is-active {
+    background: none;
+  }
+}
+
+// Элемент внутри списка
+.choices__item {
+  padding: 7px !important;
+  padding-top: calc(7px + 0.1em) !important;
+  background: none !important;
+  box-shadow: none;
+  font-size: 16px !important;
+  width: calc(100% - 24px);
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  &.choices__item--selectable {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 31px;
+  }
+  &:last-child {
+    border-bottom: none;
+    margin-bottom: 4px;
+  }
+  &:before,
+  &:after {
+    content: none !important;
+  }
+}
+
+.choices[data-type*='select-one']::after {
+  width: 24px;
+  height: 24px;
+  border: none !important;
+  margin: 0 !important;
+  top: 2px;
+  right: 4px;
+  background: url('../img/svg/select.svg') no-repeat center center;
+  transform: translate(0px, 0px) rotate(0deg);
+  transition: 0.3s;
+}
+
+.choices.is-open[data-type*='select-one']::after {
+  transform: translate(0px, 0px) rotate(180deg);
+}

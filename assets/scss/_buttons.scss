@@ -1,0 +1,32 @@
+.buttons {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+
+.button {
+  display: inline-flex;
+  position: relative;
+  width: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+
+  border: 1px solid var(--white);
+  border-radius: 10px;
+  padding: 8px 16px;
+
+  span {
+    font-size: 16px;
+    line-height: 1.1;
+    padding-top: 0.2em;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+}

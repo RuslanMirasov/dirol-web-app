@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="./../assets/img/favicon.ico" />
+    <meta name="theme-color" content="#3ead5a" />
+    <meta name="description" content="Dirol dental care мятные вкусы с заботой о полости рта" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./../assets/css/styles.min.css" />
+    <title>Победители</title>
+  </head>
+  <body class="body">
+    <!--PRELOADER-->
+    <div class="preloader"></div>
+
+    <a href="./../" class="close-app"></a>
+
+    <main class="main">
+      <header class="header" data-header>
+        <a href="./../" class="logo">
+          <img src="./../assets/img/svg/logo.svg" alt="Dirol logo" />
+        </a>
+        <h1 class="header-title">Победители</h1>
+      </header>
+
+      <section class="section section--winners">
+        <div class="container">
+          <!-- <form action="#" class="form" novalidate>
+            <label class="label">
+              <input type="radio" name="trackMeaning" value="О чём-то личном" class="radio" onchange="window.quiz.set('trackMeaning', this.value)" />
+              <span>О чём-то личном</span>
+            </label>
+
+            <label class="label">
+              <input type="radio" name="trackMeaning" value="О моих близких" class="radio" onchange="window.quiz.set('trackMeaning', this.value)" />
+              <span>О моих близких</span>
+            </label>
+
+            <label class="label">
+              <input
+                type="radio"
+                name="trackMeaning"
+                value="О лучших моментах с друзьями"
+                class="radio"
+                onchange="window.quiz.set('trackMeaning', this.value)"
+              />
+              <span>О лучших моментах <br />с&nbsp;друзьями</span>
+            </label>
+
+            <label class="label">
+              <input
+                type="radio"
+                name="trackMeaning"
+                value="Связано с моей любовью"
+                class="radio"
+                onchange="window.quiz.set('trackMeaning', this.value)"
+              />
+              <span>Связано <br />с моей любовью</span>
+            </label>
+
+            <label class="label">
+              <input
+                type="radio"
+                name="trackMeaning"
+                value="Связано с моим питомцем"
+                class="radio"
+                onchange="window.quiz.set('trackMeaning', this.value)"
+              />
+              <span>Связано <br />с моим питомцем</span>
+            </label>
+
+            <label class="label">
+              <input
+                type="radio"
+                name="trackMeaning"
+                value="Случайный кадр-вдохновение"
+                class="radio"
+                onchange="window.quiz.set('trackMeaning', this.value)"
+              />
+              <span>Случайный <br />кадр-вдохновение</span>
+            </label>
+
+            <label class="label">
+              <input type="radio" name="trackMeaning" value="Про мою тусовку" class="radio" onchange="window.quiz.set('trackMeaning', this.value)" />
+              <span>Про мою тусовку</span>
+            </label>
+
+            <label class="label">
+              <input type="radio" name="trackMeaning" value="Просто мем" class="radio" onchange="window.quiz.set('trackMeaning', this.value)" />
+              <span>Просто мем</span>
+            </label>
+          </form> -->
+
+          <!--ФИЛЬТРЫ-->
+          <div class="filters">
+            <form action="#" class="form form--filters" novalidate>
+              <select data-select name="time-period" onchange="console.log({ name: this.name, value: this.value })">
+                <option value="неделя 1">неделя&nbsp;1</option>
+                <option value="неделя 2">неделя&nbsp;2</option>
+                <option value="неделя 3">неделя&nbsp;3</option>
+                <option value="неделя 4">неделя&nbsp;4</option>
+                <option value="неделя 5">неделя&nbsp;5</option>
+              </select>
+
+              <label class="label">
+                <input type="radio" name="period" value="weekly" class="radio" checked />
+                <span>Еженедельные</span>
+              </label>
+
+              <label class="label">
+                <input type="radio" name="period" value="main-weekly" class="radio" />
+                <span>Главный еженедельный</span>
+              </label>
+
+              <label class="label">
+                <input type="radio" name="period" value="main" class="radio" />
+                <span>Главный</span>
+              </label>
+            </form>
+
+            <form action="#" class="form" novalidate>
+              <label class="label">
+                <input type="text" name="search" class="input input--search" required />
+                <button type="submit" class="search-submit"></button>
+                <button type="reset" class="button-reset"></button>
+              </label>
+
+              <!-- <textarea name="sdsdsdsd" class="input input--textarea" placeholder="Опиши своими словами, про кого твоё фото."></textarea> -->
+            </form>
+          </div>
+
+          <!--ТАБЛИЦА ПОБЕДИТЕЛЕЙ-->
+          <div class="checks-wrapper">
+            <!-- <div class="empty">
+              <p>Победителей пока нет.</p>
+            </div> -->
+
+            <div class="custom-scrollbar" data-simplebar>
+              <ul class="winners">
+                <li>
+                  <div class="winners__left">
+                    <span>nick***naaaaaaaame</span>
+                    <span>ДД.ММ.ГГГГ</span>
+                  </div>
+                  <div class="winners__right">
+                    <span>Подписка Яндекс плюс <br />на&nbsp;6&nbsp;месяцев</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="winners__left">
+                    <span>nick***naaaaaaaame</span>
+                    <span>ДД.ММ.ГГГГ</span>
+                  </div>
+                  <div class="winners__right">
+                    <span>Cертификат яндекс афиша <br />3&nbsp;000&nbsp;₽</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="winners__left">
+                    <span>nick***naaaaaaaame</span>
+                    <span>ДД.ММ.ГГГГ</span>
+                  </div>
+                  <div class="winners__right">
+                    <span>сертификат <br />3&nbsp;000&nbsp;₽</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="winners__left">
+                    <span>nick***naaaaaaaame</span>
+                    <span>ДД.ММ.ГГГГ</span>
+                  </div>
+                  <div class="winners__right">
+                    <span>сертификат мвидео <br />20&nbsp;000 ₽</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="winners__left">
+                    <span>nick***naaaaaaaame</span>
+                    <span>ДД.ММ.ГГГГ</span>
+                  </div>
+                  <div class="winners__right">
+                    <span>сертификат мвидео <br />20&nbsp;000 ₽</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="winners__left">
+                    <span>nick***naaaaaaaame</span>
+                    <span>ДД.ММ.ГГГГ</span>
+                  </div>
+                  <div class="winners__right">
+                    <span>1&nbsp;000&nbsp;₽</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="winners__left">
+                    <span>nick***naaaaaaaame</span>
+                    <span>ДД.ММ.ГГГГ</span>
+                  </div>
+                  <div class="winners__right">
+                    <span>1&nbsp;000&nbsp;₽</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./../assets/js/forms.js" type="module"></script>
+    <script src="./../assets/js/scripts.js" type="module"></script>
+  </body>
+</html>

@@ -7,15 +7,23 @@
   --black: #282828;
   --grey: #898989;
   --red: #95282a;
-  --invalid: #ff002b;
+  --invalid: #ff0000;
   --green: #3ead5a;
   --green-light: #92d051;
+  --violet: #cc63ce;
+  --violet-dark: #633187;
   --green-gradient: linear-gradient(90deg, #00742f, #6bb323);
 }
 
+@import 'preloader';
 @import 'fonts';
 @import 'reset';
 @import 'animations';
 @import 'header';
+@import 'buttons';
+@import 'forms';
 @import 'section__hero';
 @import 'section__prizes';
+@import 'section__lk';
+@import 'section__winners';
+@import 'select';

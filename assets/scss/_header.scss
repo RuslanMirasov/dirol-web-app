@@ -86,11 +86,21 @@
   }
 }
 
-.header-title {
+.header-title,
+.title {
   font-size: 30px;
   line-height: 1.1;
   text-transform: uppercase;
   padding-top: 0.1em;
+  @media (max-width: 374px) {
+    font-size: 28px;
+  }
+}
+
+.title {
+  display: block;
+  width: 100%;
+  text-align: center;
 }
 
 .navigation {
