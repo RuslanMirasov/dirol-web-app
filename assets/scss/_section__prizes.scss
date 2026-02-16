@@ -2,12 +2,17 @@
   display: flex;
   position: relative;
   width: 100%;
+  min-height: 100svh;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   align-content: center;
-  flex: 1;
   padding-bottom: 40px;
+  padding-top: 80px;
+
+  .container {
+    margin: auto;
+  }
 }
 
 .prizes {

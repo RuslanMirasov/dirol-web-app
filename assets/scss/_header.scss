@@ -1,8 +1,31 @@
+.header {
+  display: flex;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  background: var(--green-dark);
+  width: 100%;
+  height: 60px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0px 10px;
+  z-index: 10;
+  gap: 20px;
+}
+
+.logo {
+  display: block;
+}
+
 .burger {
   display: flex;
   position: fixed;
   right: 10px;
-  top: 10px;
+  top: 13px;
   justify-content: center;
   align-items: center;
   align-content: center;
@@ -45,62 +68,12 @@
       opacity: 0;
     }
     &:before {
-      width: 70%;
       transform: translate(0px, 0px) rotate(45deg);
     }
     &:after {
-      width: 70%;
       transform: translate(0px, 0px) rotate(-45deg);
     }
   }
-}
-
-.header {
-  display: flex;
-  position: relative;
-  top: 0px;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  padding: 40px 20px 0px 20px;
-  &:after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 40px;
-    background: url('../img/svg/header-right.svg') no-repeat center center/cover;
-    margin-left: auto;
-  }
-}
-
-.logo {
-  display: block;
-  width: 60px;
-  height: auto;
-  margin-right: auto;
-  img {
-    width: 50px;
-    margin: auto;
-  }
-}
-
-.header-title,
-.title {
-  font-size: 30px;
-  line-height: 1.1;
-  text-transform: uppercase;
-  padding-top: 0.1em;
-  @media (max-width: 374px) {
-    font-size: 28px;
-  }
-}
-
-.title {
-  display: block;
-  width: 100%;
-  text-align: center;
 }
 
 .navigation {
@@ -143,7 +116,7 @@
 .menu {
   display: flex;
   z-index: 2;
-  padding: 20px 20px 80px 20px;
+  padding: 60px 20px 120px 20px;
   margin: auto;
   width: 100%;
   height: auto;
@@ -191,5 +164,35 @@
         transition: 0.5s ease-out 0.35s;
       }
     }
+  }
+}
+
+.go-back {
+  display: inline-flex;
+  position: absolute;
+  left: 10px;
+  top: 17px;
+  width: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 5px;
+  padding: 6px 10px;
+  background: var(--white);
+  border-radius: 20px;
+
+  span {
+    font-size: 12px;
+    line-height: 1;
+    color: var(--green-dark);
+    padding-top: 0.1em;
+  }
+
+  &:before {
+    content: '';
+    width: 11px;
+    height: 8px;
+    background: url('../img/svg/go-back.svg') no-repeat center center;
   }
 }
