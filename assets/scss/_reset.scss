@@ -170,7 +170,22 @@ a {
   line-height: 1.1;
   text-transform: uppercase;
   padding-top: 0.1em;
+  &.title--40 {
+    font-size: 40px;
+    line-height: 1.05;
+  }
+  &.title--18 {
+    font-size: 18px;
+    line-height: 1.2;
+  }
+
   @media (max-width: 374px) {
     font-size: 28px;
+    &.title--40 {
+      font-size: 40px;
+    }
+    &.title--18 {
+      font-size: 18px;
+    }
   }
 }
