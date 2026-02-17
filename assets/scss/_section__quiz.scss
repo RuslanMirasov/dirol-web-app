@@ -53,7 +53,7 @@
   width: 94px;
   position: absolute;
   left: 0px;
-  bottom: 0px;
+  top: 200%;
 }
 
 .melon2 {
@@ -88,4 +88,20 @@
   display: inline-block;
   width: auto;
   min-width: 14px;
+}
+
+.my-variant {
+  + .label {
+    display: none;
+  }
+
+  &.active {
+    background: var(--white);
+    span {
+      color: var(--violet);
+    }
+    + .label {
+      display: block;
+    }
+  }
 }

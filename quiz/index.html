@@ -43,7 +43,7 @@
 
     <!--MAIN-->
     <main class="main">
-      <section class="section section--quiz" data-slider="quiz" data-allow-touch-move="false">
+      <section class="section section--quiz" data-slider="quiz" data-allow-touch-move="false" data-auto-height="true">
         <div class="container">
           <h1 class="title">Вопрос №<span data-question-number>1</span></h1>
 
@@ -67,10 +67,8 @@
                       name="unique"
                       value="true"
                       class="radio"
-                      onchange="
-                        window.quiz.set('unique', true);
-                        goToSlide('quiz', 2);
-                      "
+                      onchange="window.quiz.set('unique', true)"
+                      onclick="goToSlide('quiz', 2)"
                     />
                     <span>Хочу получить<br />уникальный трек</span>
                   </label>
@@ -81,10 +79,8 @@
                       name="unique"
                       value="false"
                       class="radio"
-                      onchange="
-                        window.quiz.set('unique', false);
-                        window.location.href = './../result';
-                      "
+                      onchange="window.quiz.reset()"
+                      onclick="window.location.href = './../result'"
                     />
                     <span>Пропустить</span>
                     <img src="./../assets/img/fruits/melon2.webp" alt="melon" class="melon2 move-3" />
@@ -108,10 +104,8 @@
                       name="trackMeaning"
                       value="О чём-то личном"
                       class="radio"
-                      onchange="
-                        window.quiz.set('trackMeaning', this.value);
-                        goToSlide('quiz', 3);
-                      "
+                      onchange="window.quiz.set('trackMeaning', this.value)"
+                      onclick="goToSlide('quiz', 3)"
                     />
                     <span>О чём-то личном</span>
                   </label>
@@ -122,10 +116,8 @@
                       name="trackMeaning"
                       value="О моих близких"
                       class="radio"
-                      onchange="
-                        window.quiz.set('trackMeaning', this.value);
-                        goToSlide('quiz', 3);
-                      "
+                      onchange="window.quiz.set('trackMeaning', this.value)"
+                      onclick="goToSlide('quiz', 3)"
                     />
                     <span>О моих близких</span>
                   </label>
@@ -136,10 +128,8 @@
                       name="trackMeaning"
                       value="О лучших моментах с друзьями"
                       class="radio"
-                      onchange="
-                        window.quiz.set('trackMeaning', this.value);
-                        goToSlide('quiz', 3);
-                      "
+                      onchange="window.quiz.set('trackMeaning', this.value)"
+                      onclick="goToSlide('quiz', 3)"
                     />
                     <span>О лучших моментах <br />с&nbsp;друзьями</span>
                   </label>
@@ -150,10 +140,8 @@
                       name="trackMeaning"
                       value="Связано с моей любовью"
                       class="radio"
-                      onchange="
-                        window.quiz.set('trackMeaning', this.value);
-                        goToSlide('quiz', 3);
-                      "
+                      onchange="window.quiz.set('trackMeaning', this.value)"
+                      onclick="goToSlide('quiz', 3)"
                     />
                     <span>Связано <br />с моей любовью</span>
                   </label>
@@ -164,10 +152,8 @@
                       name="trackMeaning"
                       value="Связано с моим питомцем"
                       class="radio"
-                      onchange="
-                        window.quiz.set('trackMeaning', this.value);
-                        goToSlide('quiz', 3);
-                      "
+                      onchange="window.quiz.set('trackMeaning', this.value)"
+                      onclick="goToSlide('quiz', 3)"
                     />
                     <span>Связано <br />с моим питомцем</span>
                   </label>
@@ -178,10 +164,8 @@
                       name="trackMeaning"
                       value="Случайный кадр-вдохновение"
                       class="radio"
-                      onchange="
-                        window.quiz.set('trackMeaning', this.value);
-                        goToSlide('quiz', 3);
-                      "
+                      onchange="window.quiz.set('trackMeaning', this.value)"
+                      onclick="goToSlide('quiz', 3)"
                     />
                     <span>Случайный <br />кадр-вдохновение</span>
                   </label>
@@ -192,10 +176,8 @@
                       name="trackMeaning"
                       value="Про мою тусовку"
                       class="radio"
-                      onchange="
-                        window.quiz.set('trackMeaning', this.value);
-                        goToSlide('quiz', 3);
-                      "
+                      onchange="window.quiz.set('trackMeaning', this.value)"
+                      onclick="goToSlide('quiz', 3)"
                     />
                     <span>Про мою тусовку</span>
                   </label>
@@ -206,29 +188,44 @@
                       name="trackMeaning"
                       value="Просто мем"
                       class="radio"
-                      onchange="
-                        window.quiz.set('trackMeaning', this.value);
-                        goToSlide('quiz', 3);
-                      "
+                      onchange="window.quiz.set('trackMeaning', this.value)"
+                      onclick="goToSlide('quiz', 3)"
                     />
                     <span>Просто мем</span>
                   </label>
                 </form>
 
                 <div class="buttons">
-                  <button type="button" class="button full"><span>Выбрать свой вариант</span></button>
+                  <button
+                    type="button"
+                    class="button full my-variant"
+                    onclick="
+                      this.classList.toggle('active');
+                      window.swipers?.quiz.updateAutoHeight();
+                    "
+                  >
+                    <span>Выбрать свой вариант</span>
+                  </button>
+                  <label class="label">
+                    <textarea
+                      name="trackMeaning"
+                      class="input input--textarea"
+                      placeholder="Опиши своими словами, про кого твоё фото."
+                      data-my-variant
+                      value=""
+                    ></textarea>
+                  </label>
                   <button type="button" class="button full" onclick="goToSlide('quiz', 3)"><span>Пропустить описание сюжета</span></button>
                   <button type="button" class="button full" onclick="goToSlide('quiz', 1)"><span>Вернуться к прошлому шагу</span></button>
                 </div>
+
+                <button class="button button--next" onclick="goToSlide('quiz', 3)"><span>Далее</span></button>
               </div>
 
               <!--ВОПРОС НОМЕР 3-->
               <div class="swiper-slide">
                 <div class="description">
-                  <p>
-                    Огонь! 🔥 А теперь словим вайб<br />
-                    твоего снимка. Какой он?
-                  </p>
+                  <p>Огонь! 🔥 А теперь словим вайб твоего снимка. Какой&nbsp;он?</p>
                 </div>
 
                 <form action="#" class="form" novalidate>
@@ -238,10 +235,8 @@
                       name="imageVibe"
                       value="Чилловый"
                       class="radio"
-                      onchange="
-                        window.quiz.set('imageVibe', this.value);
-                        goToSlide('quiz', 4);
-                      "
+                      onchange="window.quiz.set('imageVibe', this.value)"
+                      onclick="goToSlide('quiz', 4)"
                     />
                     <span>Чилловый</span>
                   </label>
@@ -251,10 +246,8 @@
                       name="imageVibe"
                       value="Движовый"
                       class="radio"
-                      onchange="
-                        window.quiz.set('imageVibe', this.value);
-                        goToSlide('quiz', 4);
-                      "
+                      onchange="window.quiz.set('imageVibe', this.value)"
+                      onclick="goToSlide('quiz', 4)"
                     />
                     <span>Движовый</span>
                   </label>
@@ -264,10 +257,8 @@
                       name="imageVibe"
                       value="Романтичный"
                       class="radio"
-                      onchange="
-                        window.quiz.set('imageVibe', this.value);
-                        goToSlide('quiz', 4);
-                      "
+                      onchange="window.quiz.set('imageVibe', this.value)"
+                      onclick="goToSlide('quiz', 4)"
                     />
                     <span>Романтичный</span>
                   </label>
@@ -277,10 +268,8 @@
                       name="imageVibe"
                       value="Угарный"
                       class="radio"
-                      onchange="
-                        window.quiz.set('imageVibe', this.value);
-                        goToSlide('quiz', 4);
-                      "
+                      onchange="window.quiz.set('imageVibe', this.value)"
+                      onclick="goToSlide('quiz', 4)"
                     />
                     <span>Угарный</span>
                   </label>
@@ -290,10 +279,8 @@
                       name="imageVibe"
                       value="Драматичный"
                       class="radio"
-                      onchange="
-                        window.quiz.set('imageVibe', this.value);
-                        goToSlide('quiz', 4);
-                      "
+                      onchange="window.quiz.set('imageVibe', this.value)"
+                      onclick="goToSlide('quiz', 4)"
                     />
                     <span>Драматичный</span>
                   </label>
@@ -303,10 +290,8 @@
                       name="imageVibe"
                       value="Ми-ми-мишный"
                       class="radio"
-                      onchange="
-                        window.quiz.set('imageVibe', this.value);
-                        goToSlide('quiz', 4);
-                      "
+                      onchange="window.quiz.set('imageVibe', this.value)"
+                      onclick="goToSlide('quiz', 4)"
                     />
                     <span>Ми-ми-мишный</span>
                   </label>
@@ -316,10 +301,8 @@
                       name="imageVibe"
                       value="Эстетик core"
                       class="radio"
-                      onchange="
-                        window.quiz.set('imageVibe', this.value);
-                        goToSlide('quiz', 4);
-                      "
+                      onchange="window.quiz.set('imageVibe', this.value)"
+                      onclick="goToSlide('quiz', 4)"
                     />
                     <span>Эстетик core</span>
                     <img src="./../assets/img/fruits/orange.webp" alt="orange" class="orange move-3" />
@@ -327,10 +310,30 @@
                 </form>
 
                 <div class="buttons">
-                  <button type="button" class="button full"><span>Описать cвой вайб</span></button>
+                  <button
+                    type="button"
+                    class="button full my-variant"
+                    onclick="
+                      this.classList.toggle('active');
+                      window.swipers?.quiz.updateAutoHeight();
+                    "
+                  >
+                    <span>Описать cвой вайб</span>
+                  </button>
+                  <label class="label">
+                    <textarea
+                      name="imageVibe"
+                      class="input input--textarea"
+                      placeholder="Если хочешь, опиши вайб своими словами."
+                      data-my-variant
+                      value=""
+                    ></textarea>
+                  </label>
                   <button type="button" class="button full" onclick="goToSlide('quiz', 4)"><span>Пропустить</span></button>
                   <button type="button" class="button full" onclick="goToSlide('quiz', 2)"><span>Вернуться к прошлому шагу</span></button>
                 </div>
+
+                <button class="button button--next" onclick="goToSlide('quiz', 4)"><span>Далее</span></button>
               </div>
 
               <!--ВОПРОС НОМЕР 4-->
@@ -350,10 +353,8 @@
                       name="photoFocus"
                       value="Атмосфера места"
                       class="radio"
-                      onchange="
-                        window.quiz.set('photoFocus', this.value);
-                        goToSlide('quiz', 5);
-                      "
+                      onchange="window.quiz.set('photoFocus', this.value)"
+                      onclick="goToSlide('quiz', 5)"
                     />
                     <span>Атмосфера места</span>
                   </label>
@@ -363,10 +364,8 @@
                       name="photoFocus"
                       value="Моё настроение"
                       class="radio"
-                      onchange="
-                        window.quiz.set('photoFocus', this.value);
-                        goToSlide('quiz', 5);
-                      "
+                      onchange="window.quiz.set('photoFocus', this.value)"
+                      onclick="goToSlide('quiz', 5)"
                     />
                     <span>Моё настроение</span>
                   </label>
@@ -376,10 +375,8 @@
                       name="photoFocus"
                       value="Цвета и свет"
                       class="radio"
-                      onchange="
-                        window.quiz.set('photoFocus', this.value);
-                        goToSlide('quiz', 5);
-                      "
+                      onchange="window.quiz.set('photoFocus', this.value)"
+                      onclick="goToSlide('quiz', 5)"
                     />
                     <span>Цвета и свет</span>
                   </label>
@@ -389,10 +386,8 @@
                       name="photoFocus"
                       value="Люди"
                       class="radio"
-                      onchange="
-                        window.quiz.set('photoFocus', this.value);
-                        goToSlide('quiz', 5);
-                      "
+                      onchange="window.quiz.set('photoFocus', this.value)"
+                      onclick="goToSlide('quiz', 5)"
                     />
                     <span>Люди</span>
                   </label>
@@ -402,10 +397,8 @@
                       name="photoFocus"
                       value="Событие"
                       class="radio"
-                      onchange="
-                        window.quiz.set('photoFocus', this.value);
-                        goToSlide('quiz', 5);
-                      "
+                      onchange="window.quiz.set('photoFocus', this.value)"
+                      onclick="goToSlide('quiz', 5)"
                     />
                     <span>Событие</span>
                   </label>
@@ -415,10 +408,8 @@
                       name="photoFocus"
                       value="Детали"
                       class="radio"
-                      onchange="
-                        window.quiz.set('photoFocus', this.value);
-                        goToSlide('quiz', 5);
-                      "
+                      onchange="window.quiz.set('photoFocus', this.value)"
+                      onclick="goToSlide('quiz', 5)"
                     />
                     <span>Детали</span>
                   </label>
@@ -428,20 +419,38 @@
                       name="photoFocus"
                       value="Любимый питомец"
                       class="radio"
-                      onchange="
-                        window.quiz.set('photoFocus', this.value);
-                        goToSlide('quiz', 5);
-                      "
+                      onchange="window.quiz.set('photoFocus', this.value)"
+                      onclick="goToSlide('quiz', 5)"
                     />
                     <span>Любимый питомец</span>
                   </label>
                 </form>
 
                 <div class="buttons">
-                  <button type="button" class="button full"><span>Выбрать свой вариант</span></button>
+                  <button
+                    type="button"
+                    class="button full my-variant"
+                    onclick="
+                      this.classList.toggle('active');
+                      window.swipers?.quiz.updateAutoHeight();
+                    "
+                  >
+                    <span>Выбрать свой вариант</span>
+                  </button>
+                  <label class="label">
+                    <textarea
+                      name="photoFocus"
+                      class="input input--textarea"
+                      placeholder="Опиши главное на твоём фото."
+                      data-my-variant
+                      value=""
+                    ></textarea>
+                  </label>
                   <button type="button" class="button full" onclick="goToSlide('quiz', 5)"><span>Пропустить описание фото</span></button>
                   <button type="button" class="button full" onclick="goToSlide('quiz', 3)"><span>Вернуться к прошлому шагу</span></button>
                 </div>
+
+                <button class="button button--next" onclick="goToSlide('quiz', 5)"><span>Далее</span></button>
               </div>
 
               <!--ВОПРОС НОМЕР 5-->
@@ -461,10 +470,8 @@
                       name="musicStyle"
                       value="🎧 K-pop"
                       class="radio"
-                      onchange="
-                        window.quiz.set('musicStyle', this.value);
-                        goToSlide('quiz', 6);
-                      "
+                      onchange="window.quiz.set('musicStyle', this.value)"
+                      onclick="goToSlide('quiz', 6)"
                     />
                     <span>🎧 K-pop</span>
                   </label>
@@ -474,10 +481,8 @@
                       name="musicStyle"
                       value="🎵 Инди"
                       class="radio"
-                      onchange="
-                        window.quiz.set('musicStyle', this.value);
-                        goToSlide('quiz', 6);
-                      "
+                      onchange="window.quiz.set('musicStyle', this.value)"
+                      onclick="goToSlide('quiz', 6)"
                     />
                     <span>🎵 Инди</span>
                   </label>
@@ -487,10 +492,8 @@
                       name="musicStyle"
                       value="🎤 Hip-hop / trap"
                       class="radio"
-                      onchange="
-                        window.quiz.set('musicStyle', this.value);
-                        goToSlide('quiz', 6);
-                      "
+                      onchange="window.quiz.set('musicStyle', this.value)"
+                      onclick="goToSlide('quiz', 6)"
                     />
                     <span>🎤 Hip-hop / trap</span>
                   </label>
@@ -500,10 +503,8 @@
                       name="musicStyle"
                       value="🎸 Рок"
                       class="radio"
-                      onchange="
-                        window.quiz.set('musicStyle', this.value);
-                        goToSlide('quiz', 6);
-                      "
+                      onchange="window.quiz.set('musicStyle', this.value)"
+                      onclick="goToSlide('quiz', 6)"
                     />
                     <span>🎸 Рок</span>
                   </label>
@@ -513,10 +514,8 @@
                       name="musicStyle"
                       value="🎸 House"
                       class="radio"
-                      onchange="
-                        window.quiz.set('musicStyle', this.value);
-                        goToSlide('quiz', 6);
-                      "
+                      onchange="window.quiz.set('musicStyle', this.value)"
+                      onclick="goToSlide('quiz', 6)"
                     />
                     <span>🎸 House</span>
                   </label>
@@ -526,10 +525,8 @@
                       name="musicStyle"
                       value="🪩 Dance"
                       class="radio"
-                      onchange="
-                        window.quiz.set('musicStyle', this.value);
-                        goToSlide('quiz', 6);
-                      "
+                      onchange="window.quiz.set('musicStyle', this.value)"
+                      onclick="goToSlide('quiz', 6)"
                     />
                     <span>🪩 Dance</span>
                   </label>
@@ -539,10 +536,8 @@
                       name="musicStyle"
                       value="🪩 Акустика"
                       class="radio"
-                      onchange="
-                        window.quiz.set('musicStyle', this.value);
-                        goToSlide('quiz', 6);
-                      "
+                      onchange="window.quiz.set('musicStyle', this.value)"
+                      onclick="goToSlide('quiz', 6)"
                     />
                     <span>🪩 Акустика</span>
                   </label>
@@ -552,29 +547,44 @@
                       name="musicStyle"
                       value="🎲 Случайный"
                       class="radio"
-                      onchange="
-                        window.quiz.set('musicStyle', this.value);
-                        goToSlide('quiz', 6);
-                      "
+                      onchange="window.quiz.set('musicStyle', this.value)"
+                      onclick="goToSlide('quiz', 6)"
                     />
                     <span>🎲 Случайный</span>
                   </label>
                 </form>
 
                 <div class="buttons">
-                  <button type="button" class="button full"><span>Выбрать свой вариант</span></button>
+                  <button
+                    type="button"
+                    class="button full my-variant"
+                    onclick="
+                      this.classList.toggle('active');
+                      window.swipers?.quiz.updateAutoHeight();
+                    "
+                  >
+                    <span>Выбрать свой вариант</span>
+                  </button>
+                  <label class="label">
+                    <textarea
+                      name="musicStyle"
+                      class="input input--textarea"
+                      placeholder="Напиши свой стиль музыки или имя любимого исполнителя."
+                      data-my-variant
+                      value=""
+                    ></textarea>
+                  </label>
                   <button type="button" class="button full" onclick="goToSlide('quiz', 6)"><span>Пропустить выбор стиля музыки</span></button>
                   <button type="button" class="button full" onclick="goToSlide('quiz', 4)"><span>Вернуться к прошлому шагу</span></button>
                 </div>
+
+                <button class="button button--next" onclick="goToSlide('quiz', 6)"><span>Далее</span></button>
               </div>
 
               <!--ВОПРОС НОМЕР 6-->
               <div class="swiper-slide">
                 <div class="description">
-                  <p>
-                    мы Уже близки к финалу! 👍 Просто выбери вкус<br />
-                    Dirol, который созвучен твоему снимку:
-                  </p>
+                  <p>мы Уже близки к финалу! 👍 Просто выбери вкус Dirol, который созвучен твоему снимку:</p>
                 </div>
 
                 <form action="#" class="form" novalidate>
@@ -584,10 +594,8 @@
                       name="dirolFlavor"
                       value="Бесконечная свежесть черники и цитруса"
                       class="radio"
-                      onchange="
-                        window.quiz.set('dirolFlavor', this.value);
-                        window.location.href = './../result';
-                      "
+                      onchange="window.quiz.set('dirolFlavor', this.value)"
+                      onclick="window.location.href = './../result'"
                     />
                     <span>Бесконечная свежесть <br />черники и цитруса</span>
                   </label>
@@ -597,10 +605,8 @@
                       name="dirolFlavor"
                       value="Свежий вкус мяты и мелиссы"
                       class="radio"
-                      onchange="
-                        window.quiz.set('dirolFlavor', this.value);
-                        window.location.href = './../result';
-                      "
+                      onchange="window.quiz.set('dirolFlavor', this.value)"
+                      onclick="window.location.href = './../result'"
                     />
                     <span>Свежий вкус <br />мяты и мелиссы</span>
                   </label>
@@ -610,10 +616,8 @@
                       name="dirolFlavor"
                       value="Сочная и яркая малина"
                       class="radio"
-                      onchange="
-                        window.quiz.set('dirolFlavor', this.value);
-                        window.location.href = './../result';
-                      "
+                      onchange="window.quiz.set('dirolFlavor', this.value)"
+                      onclick="window.location.href = './../result'"
                     />
                     <span>Сочная и яркая <br />малина</span>
                   </label>
@@ -623,10 +627,8 @@
                       name="dirolFlavor"
                       value="Дико-дикий виноград"
                       class="radio"
-                      onchange="
-                        window.quiz.set('dirolFlavor', this.value);
-                        window.location.href = './../result';
-                      "
+                      onchange="window.quiz.set('dirolFlavor', this.value)"
+                      onclick="window.location.href = './../result'"
                     />
                     <span>Дико-дикий <br />виноград</span>
                   </label>
@@ -636,10 +638,8 @@
                       name="dirolFlavor"
                       value="Со вкусом маракуйи"
                       class="radio"
-                      onchange="
-                        window.quiz.set('dirolFlavor', this.value);
-                        window.location.href = './../result';
-                      "
+                      onchange="window.quiz.set('dirolFlavor', this.value)"
+                      onclick="window.location.href = './../result'"
                     />
                     <span>Со вкусом маракуйи</span>
                   </label>
@@ -649,10 +649,8 @@
                       name="dirolFlavor"
                       value="Яркий Bubble Fresh"
                       class="radio"
-                      onchange="
-                        window.quiz.set('dirolFlavor', this.value);
-                        window.location.href = './../result';
-                      "
+                      onchange="window.quiz.set('dirolFlavor', this.value)"
+                      onclick="window.location.href = './../result'"
                     />
                     <span>Яркий Bubble Fresh</span>
                   </label>
@@ -662,10 +660,8 @@
                       name="dirolFlavor"
                       value="Звонкий Арбузно-дынный коктейль"
                       class="radio"
-                      onchange="
-                        window.quiz.set('dirolFlavor', this.value);
-                        window.location.href = './../result';
-                      "
+                      onchange="window.quiz.set('dirolFlavor', this.value)"
+                      onclick="window.location.href = './../result'"
                     />
                     <span>Звонкий Арбузно-дынный коктейль</span>
                     <img src="./../assets/img/fruits/melon3.webp" alt="melon" class="melon3 move-3" />

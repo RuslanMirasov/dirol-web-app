@@ -712,6 +712,18 @@ a {
 .button.big span {
   font-size: 18px;
 }
+.button.button--next {
+  display: none;
+  min-width: 136px;
+  background: var(--white);
+  border-radius: 50px;
+  padding: 3px 16px;
+}
+.button.button--next span {
+  color: var(--black);
+  font-size: 20px;
+  padding-top: 0.1em;
+}
 
 .form {
   display: -webkit-box;
@@ -911,7 +923,7 @@ a {
 }
 .section--hero .container {
   height: 100%;
-  min-height: 100dvh;
+  min-height: calc(100dvh - 50px);
   gap: 0px;
 }
 
@@ -2047,7 +2059,7 @@ a {
   width: 94px;
   position: absolute;
   left: 0px;
-  bottom: 0px;
+  top: 200%;
 }
 
 .melon2 {
@@ -2082,6 +2094,19 @@ a {
   display: inline-block;
   width: auto;
   min-width: 14px;
+}
+
+.my-variant + .label {
+  display: none;
+}
+.my-variant.active {
+  background: var(--white);
+}
+.my-variant.active span {
+  color: var(--violet);
+}
+.my-variant.active + .label {
+  display: block;
 }
 
 .choices {

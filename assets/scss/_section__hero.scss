@@ -6,7 +6,7 @@
 
   .container {
     height: 100%;
-    min-height: 100dvh;
+    min-height: calc(100dvh - 50px);
     gap: 0px;
   }
 }

@@ -137,4 +137,11 @@ const onQuizeSlideChange = number => {
 
   quizTitle.innerHTML = number + 1;
   history.replaceState(null, '', `?q=${number + 1}`);
+
+  setTimeout(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  }, 600);
 };

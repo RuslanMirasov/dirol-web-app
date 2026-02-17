@@ -38,4 +38,17 @@
       font-size: 18px;
     }
   }
+
+  &.button--next {
+    display: none;
+    min-width: 136px;
+    background: var(--white);
+    border-radius: 50px;
+    padding: 3px 16px;
+    span {
+      color: var(--black);
+      font-size: 20px;
+      padding-top: 0.1em;
+    }
+  }
 }
