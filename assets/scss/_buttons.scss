@@ -17,10 +17,13 @@
   align-items: center;
   align-content: center;
   gap: 10px;
-
   border: 1px solid var(--white);
   border-radius: 10px;
   padding: 8px 16px;
+  font-family: var(--font);
+  &.full {
+    width: 100%;
+  }
 
   span {
     font-size: 16px;
@@ -28,5 +31,11 @@
     padding-top: 0.2em;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+  }
+
+  &.big {
+    span {
+      font-size: 18px;
+    }
   }
 }

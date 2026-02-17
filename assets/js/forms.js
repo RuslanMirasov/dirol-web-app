@@ -73,7 +73,8 @@ const validateForm = form => {
   let errorsCount = 0;
 
   const inputs = form.querySelectorAll('[required]');
-  if (inputs.length === 0) return;
+
+  if (inputs.length === 0) return true;
 
   inputs.forEach(input => {
     const isInputValid = validateInput(input);
@@ -145,9 +146,11 @@ document.addEventListener(
   'submit',
   function (event) {
     const form = event.target;
+
     if (form.tagName.toLowerCase() !== 'form') return;
 
     const isValid = validateForm(form);
+
     if (!isValid) {
       event.preventDefault();
       event.stopImmediatePropagation();

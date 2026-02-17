@@ -1,0 +1,189 @@
+.create-track {
+  padding: 0px 20px;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  .description {
+    min-height: 150px;
+    margin-top: 50px;
+  }
+}
+
+.description {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--white);
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  .drums {
+    position: absolute;
+    top: -40px;
+    left: 55%;
+    transform: rotate(10deg);
+  }
+  p {
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.2;
+    color: var(--black);
+    text-align: center;
+    padding-top: 0.1em;
+  }
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  max-width: 375px;
+
+  button[type='submit'] {
+    display: none;
+  }
+}
+
+.upload-card {
+  display: none;
+  background: var(--white);
+  border-radius: 8px;
+  gap: 5px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 5px;
+}
+
+.upload-preview {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  background: var(--grey) url('../img/svg/upload.svg') no-repeat center center;
+  border-radius: 6px;
+  align-self: flex-start;
+  flex-shrink: 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.upload-info {
+  flex: 1;
+  min-width: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--black);
+  text-transform: uppercase;
+  flex-shrink: 0;
+  .upload-filename {
+    font-size: 12px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 230px;
+    @media (max-width: 374px) {
+      width: 216px;
+    }
+  }
+  .upload-size {
+    color: var(--grey);
+  }
+  .upload-message {
+    display: block;
+    width: 100%;
+    line-height: 1.1;
+    padding-top: 0.1em;
+  }
+}
+
+.delete-button {
+  display: block;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  background: url('../img/svg/basket.svg') no-repeat center center;
+}
+
+.upload-form[data-state='success'],
+.upload-form[data-state='error'] {
+  .upload-card {
+    display: flex;
+  }
+}
+
+.upload-form[data-state='error'] {
+  .upload-message {
+    color: var(--red);
+    text-transform: none;
+  }
+  .upload-size {
+    display: none;
+  }
+  .upload-button-text {
+    font-size: 0;
+    &:after {
+      content: 'ЗАГРУЗИТЬ ДРУГОЕ ФОТО';
+      font-size: 18px;
+      padding-top: 0.1em;
+    }
+  }
+}
+
+.upload-form[data-state='success'] {
+  .upload-message {
+    color: var(--green-dark);
+    font-size: 0;
+    &:after {
+      content: 'УСПЕШНО';
+      display: block;
+      font-size: 10px;
+      line-height: 1.4;
+      padding-top: 0.2em;
+      color: var(--green-dark);
+    }
+  }
+  label[for='upload-photo'] {
+    display: none;
+  }
+  button[type='submit'] {
+    display: inline-flex;
+  }
+}
+
+.drums {
+  display: block;
+  width: 154px;
+}
+
+.headphone-and-mic {
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 0px 20px;
+  margin: 0 auto;
+  .headphones {
+    width: 138.5px;
+  }
+  .microphone {
+    width: 120.5px;
+  }
+}

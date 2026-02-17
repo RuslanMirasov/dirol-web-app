@@ -14,7 +14,19 @@
     transform: translateY(0%);
   }
   50% {
-    transform: translateY(-10%);
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-15%);
   }
   100% {
     transform: translateY(0%);
@@ -25,6 +37,22 @@
   animation: spin 2s linear infinite;
 }
 
-.move {
+.move-1 {
   animation: float 3s ease-in-out infinite;
+}
+
+.move-2 {
+  animation: float 2.8s ease-in-out infinite;
+}
+
+.move-3 {
+  animation: float2 3s ease-in-out infinite;
+}
+
+.spin,
+.move-1,
+.move-2,
+.move-3 {
+  will-change: transform;
+  pointer-events: none;
 }

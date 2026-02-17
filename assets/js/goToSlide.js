@@ -15,20 +15,38 @@ function resolveIndex(swiper, target, base = 1) {
   return Array.from(swiper.slides).findIndex(el => el.dataset.step === s);
 }
 
-export function goToSlide(target, { key, base = 1 } = {}) {
-  const keys = Object.keys(REGISTRY);
-  const swiper = key ? REGISTRY[key] : keys.length === 1 ? REGISTRY[keys[0]] : null;
+// export function goToSlide(target, { key, base = 1 } = {}) {
+//   const keys = Object.keys(REGISTRY);
+//   const swiper = key ? REGISTRY[key] : keys.length === 1 ? REGISTRY[keys[0]] : null;
+
+//   if (!swiper) {
+//     console.warn('[goToSlide] no swiper found. Pass { key } or name your data-slider.');
+//     return;
+//   }
+
+//   const idx = resolveIndex(swiper, target, base);
+//   if (idx < 0 || idx >= swiper.slides.length) {
+//     console.warn('[goToSlide] target not found:', target);
+//     return;
+//   }
+//   swiper.slideTo(idx);
+// }
+
+export function goToSlide(key, target, base = 1) {
+  const swiper = REGISTRY[key];
 
   if (!swiper) {
-    console.warn('[goToSlide] no swiper found. Pass { key } or name your data-slider.');
+    console.warn('[goToSlide] swiper not found:', key);
     return;
   }
 
   const idx = resolveIndex(swiper, target, base);
+
   if (idx < 0 || idx >= swiper.slides.length) {
     console.warn('[goToSlide] target not found:', target);
     return;
   }
+
   swiper.slideTo(idx);
 }
 

@@ -111,7 +111,30 @@ export const initSliders = () => {
       const key = rawKey && rawKey.trim();
       if (key) {
         registerNamedSwiper(key, instance);
+
+        if (key === 'quiz') {
+          instance.on('slideChange', () => {
+            onQuizeSlideChange(instance.activeIndex);
+          });
+        }
       }
     });
   }
+};
+
+const onQuizeSlideChange = number => {
+  const quizTitle = document.querySelector('[data-question-number]');
+  const radioUnique = document.querySelectorAll('input[name="unique"]');
+
+  if (!quizTitle || !radioUnique.length) return;
+
+  if (number === 0) {
+    radioUnique.forEach(radio => {
+      radio.checked = false;
+      window.quiz.set('unique', false);
+    });
+  }
+
+  quizTitle.innerHTML = number + 1;
+  history.replaceState(null, '', `?q=${number + 1}`);
 };

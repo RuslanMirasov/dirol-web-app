@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --font: 'intro-head-h-base-regular', sans-serif;
   --montserrat: 'montserrat-regular', sans-serif;
@@ -329,8 +330,8 @@ a {
             transform: translateY(0%);
   }
   50% {
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
   }
   100% {
     -webkit-transform: translateY(0%);
@@ -343,8 +344,36 @@ a {
             transform: translateY(0%);
   }
   50% {
-    -webkit-transform: translateY(-10%);
-            transform: translateY(-10%);
+    -webkit-transform: translateY(-5%);
+            transform: translateY(-5%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@-webkit-keyframes float2 {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes float2 {
+  0% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+  50% {
+    -webkit-transform: translateY(-15%);
+            transform: translateY(-15%);
   }
   100% {
     -webkit-transform: translateY(0%);
@@ -356,9 +385,27 @@ a {
           animation: spin 2s linear infinite;
 }
 
-.move {
+.move-1 {
   -webkit-animation: float 3s ease-in-out infinite;
           animation: float 3s ease-in-out infinite;
+}
+
+.move-2 {
+  -webkit-animation: float 2.8s ease-in-out infinite;
+          animation: float 2.8s ease-in-out infinite;
+}
+
+.move-3 {
+  -webkit-animation: float2 3s ease-in-out infinite;
+          animation: float2 3s ease-in-out infinite;
+}
+
+.spin,
+.move-1,
+.move-2,
+.move-3 {
+  will-change: transform;
+  pointer-events: none;
 }
 
 .header {
@@ -509,7 +556,7 @@ a {
   display: -ms-flexbox;
   display: flex;
   z-index: 2;
-  padding: 60px 20px 120px 20px;
+  padding: 60px 20px 60px 20px;
   margin: auto;
   width: 100%;
   height: auto;
@@ -650,6 +697,10 @@ a {
   border: 1px solid var(--white);
   border-radius: 10px;
   padding: 8px 16px;
+  font-family: var(--font);
+}
+.button.full {
+  width: 100%;
 }
 .button span {
   font-size: 16px;
@@ -657,6 +708,9 @@ a {
   padding-top: 0.2em;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+}
+.button.big span {
+  font-size: 18px;
 }
 
 .form {
@@ -670,9 +724,6 @@ a {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
   gap: 10px 5px;
@@ -730,6 +781,7 @@ a {
   border-radius: 10px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  height: 100%;
 }
 .radio:checked + span {
   background: var(--violet);
@@ -1688,6 +1740,348 @@ a {
   background: url("../img/about/logo-star.webp") no-repeat right bottom;
   background-size: 35px 28px;
   padding-right: 45px;
+}
+
+.tooth,
+.about-footer {
+  max-width: 375px;
+  margin: 0 auto;
+}
+
+.create-track {
+  padding: 0px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+.create-track .description {
+  min-height: 150px;
+  margin-top: 50px;
+}
+
+.description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+  background: var(--white);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+.description .drums {
+  position: absolute;
+  top: -40px;
+  left: 55%;
+  -webkit-transform: rotate(10deg);
+      -ms-transform: rotate(10deg);
+          transform: rotate(10deg);
+}
+.description p {
+  display: block;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.2;
+  color: var(--black);
+  text-align: center;
+  padding-top: 0.1em;
+}
+
+.upload-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  max-width: 375px;
+}
+.upload-form button[type=submit] {
+  display: none;
+}
+
+.upload-card {
+  display: none;
+  background: var(--white);
+  border-radius: 8px;
+  gap: 5px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding: 5px;
+}
+
+.upload-preview {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 42px;
+  height: 42px;
+  background: var(--grey) url("../img/svg/upload.svg") no-repeat center center;
+  border-radius: 6px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.upload-preview img {
+  width: 100%;
+  height: 100%;
+}
+
+.upload-info {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 0;
+  font-size: 10px;
+  line-height: 1.2;
+  color: var(--black);
+  text-transform: uppercase;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.upload-info .upload-filename {
+  font-size: 12px;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 230px;
+}
+@media (max-width: 374px) {
+  .upload-info .upload-filename {
+    width: 216px;
+  }
+}
+.upload-info .upload-size {
+  color: var(--grey);
+}
+.upload-info .upload-message {
+  display: block;
+  width: 100%;
+  line-height: 1.1;
+  padding-top: 0.1em;
+}
+
+.delete-button {
+  display: block;
+  width: 42px;
+  height: 42px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  background: url("../img/svg/basket.svg") no-repeat center center;
+}
+
+.upload-form[data-state=success] .upload-card,
+.upload-form[data-state=error] .upload-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.upload-form[data-state=error] .upload-message {
+  color: var(--red);
+  text-transform: none;
+}
+.upload-form[data-state=error] .upload-size {
+  display: none;
+}
+.upload-form[data-state=error] .upload-button-text {
+  font-size: 0;
+}
+.upload-form[data-state=error] .upload-button-text:after {
+  content: "ЗАГРУЗИТЬ ДРУГОЕ ФОТО";
+  font-size: 18px;
+  padding-top: 0.1em;
+}
+
+.upload-form[data-state=success] .upload-message {
+  color: var(--green-dark);
+  font-size: 0;
+}
+.upload-form[data-state=success] .upload-message:after {
+  content: "УСПЕШНО";
+  display: block;
+  font-size: 10px;
+  line-height: 1.4;
+  padding-top: 0.2em;
+  color: var(--green-dark);
+}
+.upload-form[data-state=success] label[for=upload-photo] {
+  display: none;
+}
+.upload-form[data-state=success] button[type=submit] {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.drums {
+  display: block;
+  width: 154px;
+}
+
+.headphone-and-mic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 375px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 20px;
+  margin: 0 auto;
+}
+.headphone-and-mic .headphones {
+  width: 138.5px;
+}
+.headphone-and-mic .microphone {
+  width: 120.5px;
+}
+
+.section--quiz {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: auto;
+  padding: 20px;
+  padding-top: 80px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.section--quiz .container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.section--quiz .label {
+  min-width: 34%;
+}
+
+.quiz {
+  width: 100%;
+  height: 100%;
+  max-width: 375px;
+  overflow: visible;
+}
+.quiz .swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+.quiz .swiper-slide.swiper-slide-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.strawbarry {
+  width: 52px;
+  position: absolute;
+  left: -10px;
+  bottom: -20px;
+}
+
+.marakuya {
+  width: 55px;
+  position: absolute;
+  right: -10px;
+  bottom: -20px;
+}
+
+.melon1 {
+  width: 94px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.melon2 {
+  width: 60px;
+  position: absolute;
+  right: -10px;
+  bottom: -30px;
+}
+
+.melon3 {
+  width: 56px;
+  position: absolute;
+  right: -10px;
+  bottom: -18px;
+}
+
+.blueberry {
+  width: 45px;
+  position: absolute;
+  right: -10px;
+  bottom: -15px;
+}
+
+.orange {
+  width: 60px;
+  position: absolute;
+  right: -10px;
+  bottom: -15px;
+}
+
+[data-question-number] {
+  display: inline-block;
+  width: auto;
+  min-width: 14px;
 }
 
 .choices {
