@@ -71,12 +71,10 @@ export const quizStore = () => {
     let radioMatched = false;
 
     radios.forEach(radio => {
-      if (radio.name !== 'unique') {
-        const isMatch = radio.value === stringValue;
-        radio.checked = isMatch;
+      const isMatch = radio.value === stringValue;
+      radio.checked = isMatch;
 
-        if (isMatch) radioMatched = true;
-      }
+      if (isMatch) radioMatched = true;
     });
 
     const textarea = document.querySelector(`textarea[name="${field}"]`);
