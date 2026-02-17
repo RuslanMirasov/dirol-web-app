@@ -1253,6 +1253,8 @@ a {
   display: flex;
   position: relative;
   width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1275,11 +1277,11 @@ a {
   border-radius: 10px;
   border: 4px solid #bbff34;
   background: #bbff34;
+  overflow: hidden;
 }
 .user-image img {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
 }
 .user-image .set-user-image {
   display: block;
@@ -1324,6 +1326,8 @@ a {
 .checks-wrapper,
 .prizes-wrapper {
   width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
 }
 .checks-wrapper .title,
 .prizes-wrapper .title {
@@ -1541,6 +1545,8 @@ a {
   display: flex;
   position: relative;
   width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -2298,6 +2304,16 @@ a {
 .poem p span {
   display: block;
   width: 100%;
+}
+
+.fix {
+  display: block;
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+}
+.fix .label {
+  min-width: 34%;
 }
 
 .choices {
