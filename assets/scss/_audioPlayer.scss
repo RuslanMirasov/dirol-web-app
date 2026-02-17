@@ -1,0 +1,96 @@
+.audio-player {
+  width: 100%;
+  height: auto;
+  position: relative;
+  left: 0px;
+  bottom: 0px;
+  z-index: 2;
+
+  .progress-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .time {
+    font-size: 12px;
+    font-family: var(--font);
+    font-weight: 400;
+    white-space: nowrap;
+  }
+
+  .progress {
+    --value: 0%;
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background:
+      linear-gradient(#f960f0, #f960f0) 0 0 / var(--value) 100% no-repeat,
+      linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)) 0 50% / 100% 1px no-repeat;
+    outline: none;
+    cursor: pointer;
+  }
+
+  .progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background: #f960f0;
+    border-radius: 50%;
+  }
+
+  .progress::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    background: #f960f0;
+    border-radius: 50%;
+    border: none;
+  }
+
+  .controls {
+    display: flex;
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+  }
+
+  .btn {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    border-radius: 54px;
+    cursor: pointer;
+    background: none;
+    top: -10px;
+
+    &.play {
+      width: 50px;
+      height: 50px;
+      &:before {
+        content: '';
+        position: absolute;
+        right: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 50px;
+        overflow: hidden;
+        background: url('../img/svg/play.svg') no-repeat center center/cover;
+      }
+      &.active {
+        &:before {
+          background: url('../img/svg/stop.svg') no-repeat center center/cover;
+        }
+      }
+    }
+  }
+}

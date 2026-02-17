@@ -1,0 +1,124 @@
+.section--result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: auto;
+  padding: 20px 20px;
+  padding-top: 80px;
+  flex: 1;
+
+  .buttons {
+    .button {
+      flex: 1;
+      padding: 8px;
+      min-width: 34%;
+      span {
+        font-size: 15px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.result-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  width: 100%;
+  max-width: 375px;
+  gap: 20px;
+  padding: 24px 0px 50px 0px;
+
+  .drums-wrapper {
+    transform: translate(50%, 0%);
+  }
+
+  .drums {
+    transform: rotate(-15deg) scaleX(-1);
+  }
+
+  p {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 23px;
+    line-height: 1.1;
+  }
+
+  .headphone-and-mic {
+    transform: scaleX(-1);
+    padding: 0px 0px 0px 20px;
+    .headphones {
+      order: 2;
+    }
+    .microphone {
+      order: 1;
+    }
+  }
+}
+
+.result {
+  display: flex;
+  margin-bottom: auto;
+  margin-top: 10px;
+  width: 100%;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 375px;
+}
+
+.result-image {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 266px;
+  background: var(--lime);
+  border: 4px solid var(--lime);
+  border-radius: 30px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.result-title {
+  display: block;
+  margin-top: -10px;
+  span {
+    width: 100%;
+    text-align: left;
+  }
+}
+
+.poem {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 10px;
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 20px;
+    line-height: 1.1;
+  }
+
+  p {
+    display: block;
+    font-size: 16px;
+    line-height: 1.2;
+    span {
+      display: block;
+      width: 100%;
+    }
+  }
+}

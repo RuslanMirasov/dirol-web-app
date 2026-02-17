@@ -95,6 +95,13 @@
     display: none;
   }
 
+  &:focus {
+    background: inherit;
+    span {
+      color: inherit;
+    }
+  }
+
   &.active {
     background: var(--white);
     span {

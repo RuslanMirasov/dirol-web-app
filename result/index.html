@@ -42,9 +42,85 @@
 
     <!--MAIN-->
     <main class="main">
-      <section class="section section--winners">
-        <div class="container">
-          <h1 class="title">Результат</h1>
+      <section class="section section--result">
+        <h1 class="title">Результат</h1>
+
+        <!--ПОКАЗЫВАЕМ СЕКЦИЮ ПРИ ОБРАБОТКЕ ДАННЫХ-->
+
+        <!-- <div class="result-loading">
+          <div class="drums-wrapper">
+            <img src="./../assets/img/fruits/drums.webp" alt="drums" class="drums move-3" />
+          </div>
+          <p>
+            Готовооо! 🚀<br />
+            Собираю твои ответы <br />
+            и делаю трек из фото.
+          </p>
+          <p>
+            Магия займёт всего&nbsp;пару&nbsp;минут&nbsp;⏱️ <br />
+            Слушай и наслаждайся!
+          </p>
+          <div class="headphone-and-mic">
+            <img src="./../assets/img/fruits/headphones.webp" alt="headphones" class="headphones move-1" />
+            <img src="./../assets/img/fruits/mic.webp" alt="microphone" class="microphone animatedIcon move-2" />
+          </div>
+        </div> -->
+
+        <div class="result">
+          <div class="result-image">
+            <img src="./../assets/img/lk/image.webp" alt="Dirol" />
+          </div>
+
+          <h2 class="result-title">
+            <span class="title title--28">Саунд твоего фото </span>
+            <span class="title title--20">Dirol</span>
+          </h2>
+
+          <div class="audio-player">
+            <audio data-audio-file src="./../assets/sounds/track.mp3" preload="metadata"></audio>
+            <div class="progress-wrapper">
+              <input type="range" class="progress" value="0" min="0" max="100" />
+              <span class="time current">0:00</span>
+              <span class="time duration">0:00</span>
+            </div>
+            <div class="controls">
+              <button class="btn play" aria-label="Play/Pause"></button>
+            </div>
+          </div>
+
+          <div class="poem">
+            <h2>Текст песни «На сиреневой луне»</h2>
+
+            <p>
+              <span>[Куплет 1]</span>
+              Не застилая горизонт твоей луны, которой нет, <br />
+              Открыла ночь огромный зонт, встречая розовый рассвет. <br />
+              Там, на сиреневой луне, ты так хотела быть одна. <br />
+              Не забывая обо мне, ты засыпала у окна.
+
+              <span>[Предприпев]</span>
+              Когда устал новый день, такой же как и всегда, <br />
+              Ты улетела так далеко. <br />
+              Когда пришёл этот сон, возникший не обо мне, <br />
+              Ты позабыла всё так легко.
+            </p>
+
+            <p>
+              <span>[Припев]</span>
+              Ты забудешь обо мне на сиреневой луне, <br />
+              Может только на мгновенье <br />
+              Оставляя для меня только тоненькую нить, <br />
+              Только каплю сожаленья.
+            </p>
+          </div>
+
+          <div class="buttons">
+            <a href="./../" class="button"><span>Вернуться в начало</span></a>
+            <a href="./../share" class="button"><span>Поделиться треком</span></a>
+            <a href="./../assets/sounds/track.mp3" class="button" download><span>скачать трек</span></a>
+            <a href="./../create-treck/" class="button"><span>Озвучить новое фото</span></a>
+            <a href="./../fix/" class="button"><span>Внести исправления в текущий трек</span></a>
+          </div>
         </div>
       </section>
     </main>

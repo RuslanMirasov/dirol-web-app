@@ -11,6 +11,7 @@
   --green-dark: #19822c;
   --green: #3ead5a;
   --green-light: #92d051;
+  --lime: #bbff34;
   --violet: #cc63ce;
   --violet-dark: #633187;
   --green-gradient: linear-gradient(90deg, #00742f, #6bb323);
@@ -30,4 +31,6 @@
 @import 'section__about';
 @import 'section__track';
 @import 'section__quiz';
+@import 'section__result';
 @import 'select';
+@import 'audioPlayer';

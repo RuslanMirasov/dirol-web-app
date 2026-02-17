@@ -21,6 +21,7 @@
   border-radius: 10px;
   padding: 8px 16px;
   font-family: var(--font);
+  transition: background 0.3s;
   &.full {
     width: 100%;
   }
@@ -31,11 +32,19 @@
     padding-top: 0.2em;
     text-transform: uppercase;
     letter-spacing: 0.02em;
+    transition: color 0.3s;
   }
 
   &.big {
     span {
       font-size: 18px;
+    }
+  }
+
+  &:focus {
+    background: var(--white);
+    span {
+      color: var(--violet);
     }
   }
 
