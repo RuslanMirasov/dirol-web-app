@@ -46,9 +46,10 @@
 .upload-form {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   width: 100%;
   max-width: 375px;
+  margin-top: 10px;
 
   button[type='submit'] {
     display: none;

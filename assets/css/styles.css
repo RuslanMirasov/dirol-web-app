@@ -731,10 +731,10 @@ a {
 .button.big span {
   font-size: 18px;
 }
-.button:focus {
+.button:hover, .button:focus {
   background: var(--white);
 }
-.button:focus span {
+.button:hover span, .button:focus span {
   color: var(--violet);
 }
 .button.button--next {
@@ -1862,9 +1862,10 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 5px;
+  gap: 10px;
   width: 100%;
   max-width: 375px;
+  margin-top: 10px;
 }
 .upload-form button[type=submit] {
   display: none;
