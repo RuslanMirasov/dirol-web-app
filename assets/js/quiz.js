@@ -1,7 +1,7 @@
 const STORAGE_KEY = 'dirol_quiz';
 
 const defaultQuiz = {
-  unique: false,
+  unique: '',
   trackMeaning: '',
   imageVibe: '',
   photoFocus: '',
