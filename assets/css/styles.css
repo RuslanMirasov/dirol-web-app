@@ -2198,14 +2198,9 @@ a {
   padding: 24px 0px 50px 0px;
 }
 .result-loading .drums-wrapper {
-  -webkit-transform: translate(50%, 0%);
-      -ms-transform: translate(50%, 0%);
-          transform: translate(50%, 0%);
-}
-.result-loading .drums {
-  -webkit-transform: rotate(-15deg) scaleX(-1);
-      -ms-transform: rotate(-15deg) scaleX(-1);
-          transform: rotate(-15deg) scaleX(-1);
+  -webkit-transform: translate(50%, 0%) scaleX(-1) rotate(10deg);
+      -ms-transform: translate(50%, 0%) scaleX(-1) rotate(10deg);
+          transform: translate(50%, 0%) scaleX(-1) rotate(10deg);
 }
 .result-loading p {
   text-align: center;
