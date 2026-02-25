@@ -718,6 +718,7 @@ a {
 }
 .button.full {
   width: 100%;
+  min-width: 100%;
 }
 .button span {
   font-size: 16px;
@@ -2173,7 +2174,6 @@ a {
       -ms-flex: 1;
           flex: 1;
   padding: 8px;
-  min-width: 34%;
 }
 .section--result .buttons .button span {
   font-size: 15px;
