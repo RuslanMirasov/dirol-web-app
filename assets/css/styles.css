@@ -1325,17 +1325,30 @@ a {
 }
 
 .checks-wrapper,
+.tracks-wrapper,
 .prizes-wrapper {
   width: 100%;
   max-width: 375px;
   margin: 0 auto;
 }
 .checks-wrapper .title,
+.tracks-wrapper .title,
 .prizes-wrapper .title {
   margin-bottom: 20px;
 }
 
-.checks-wrapper .button {
+.tracks-wrapper {
+  margin: 20px auto;
+}
+.tracks-wrapper .checks__left {
+  width: calc(100% - 100px);
+}
+.tracks-wrapper .checks__left span:first-child {
+  opacity: 1;
+}
+
+.checks-wrapper .button,
+.tracks-wrapper .button {
   margin: 0 auto;
   margin-top: 20px;
   -ms-flex-item-align: center;
